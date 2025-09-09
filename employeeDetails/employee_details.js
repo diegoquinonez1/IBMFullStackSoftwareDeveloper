@@ -15,22 +15,28 @@ function displayEmployees() {
 
 function calculateTotalSalaries() {
     const totalSalaries = employees.reduce((acc, empIoyee) => acc + empIoyee.salary, 0);
-    alert('Total Salaries: $ ${totalSalaries}');
+    alert(`Total Salaries: $ ${totalSalaries}`);
 }
 
 function displayHREmployees() {
     const hremployees = employees.filter(employee => employee.department === 'HR');
-    const hrEmployeesDisplay = hrEmployees.map((employee) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $ ${employee.salary}</p>`).join('');
+    const hrEmployeesDisplay = hremployees.map((employee) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $ ${employee.salary}</p>`).join('');
     document.getElementById('employeesDatails').innerHTML = hrEmployeesDisplay;
 }
 
 function findEmployeeId(employeId) {
-    const foundEmployee = employees.find(employee => employee.id === employeId);
-
+    const foundEmployee = employees.find(employee => String(employee.id) === String(employeId));
+    
     if(foundEmployee) {
-        document.getElementById('employeesDatails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+        document.getElementById('employeesDatails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $ ${foundEmployee.salary}</p>`;
     }
     else {
         document.getElementById('employeesDatails').innerHTML = `no se ha encontrado ningun empleado con el id ${employeId}`;
     }
+}
+
+function findEmployeeIdInput() {
+    const idValue = document.getElementById('EmployeeID');
+    const idEmp = idValue.value;
+    findEmployeeId(idEmp);
 }
