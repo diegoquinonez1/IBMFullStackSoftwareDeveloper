@@ -1,0 +1,113 @@
+body {
+    margin: 10px;
+}
+
+#home {
+    margin: -1px -1px 0 -1px;
+    padding: 2em;
+    background-color: magenta;
+}
+
+header {
+    font-size: 30px;
+    color: purple;
+    /* float: left; */
+}
+
+nav {
+    color: gray;
+    background-color: purple;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1mm;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+b {
+    border-top: 20px solid black;
+    border-radius: 10px;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin: 25px 0 25px 0;
+}
+
+a:hover button {
+    color: white;
+    font-weight: bold;
+    background-color: purple;
+    text-decoration: none;
+}
+
+.all-conversion-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 200px; */
+}
+
+figure {
+    width: 200px;
+    text-align: justify;
+}
+
+figcaption {
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+.button-convert {
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 40px;
+    width: fit-content;
+    background-color: green;
+    margin: 20px 15px 20px 15px;
+}
+
+
+.button-convert:hover {
+    cursor: pointer;
+}
+
+#temperature {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-top: 15px solid green;
+}
+
+#weight {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-top: 15px solid coral;
+}
+
+#distance {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-top: 15px solid blue;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+fieldset {
+    margin-left: 50px;
+}
+
+#go-home {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: lightblue;
+    display: flex;
+    position: fixed;
+    left: 5;               /* Extremo izquierdo */
+    bottom: 40px;          /* A 40 píxeles de la parte inferior */
+    z-index: 1000;         /* Opcional, para asegurar que esté encima de otros elementos */
+}
